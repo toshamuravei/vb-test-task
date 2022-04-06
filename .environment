@@ -1,0 +1,10 @@
+DEBUG = 0
+
+DB_MAPPED_PORT = 5438
+POSTGRES_USER = postgresql
+POSTGRES_PASSWORD = postgresql
+POSTGRES_DB = vehicle-builder
+POSTGRES_PORT = 5432
+DB_HOST = vehicle-builder-db
+
+PGDATA = /var/lib/postgresql/vehicle_builder_data

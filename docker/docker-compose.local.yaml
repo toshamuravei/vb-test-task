@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  vehicle-builder-app:
+    container_name: vehicle_builder_app
+    restart: always
+    build:
+      context: ../
+      dockerfile: docker/Dockerfile.local
+    ports:
+      - 8080:8080
+    depends_on:
+      - vehicle-builder-db
+
+  vehicle-builder-db:
+    container_name: vehicle_builder_db
+    image: postgres:12.2
+    env_file: ../.environment
+    ports:
+      - 5438:5432
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=pgadmin4@pgadmin.org
+      - PGADMIN_DEFAULT_PASSWORD=admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - vehicle-builder-db
+
+volumes:
+  vehicle_builder_data:
+    driver: local

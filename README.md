@@ -32,11 +32,14 @@ Backend structure could be displayed like this:
     └── __init__.py
 ```
 
-Project could be started with simply:
+#### Project could be started with simply:
 ```bash
 cd project-path
 docker-compose -f docker/docker-compose.local.yaml up
 ```
 
-Service implements single RESTful http request, that could be performed from any http-client, i.e. from a web-browser:
-http://localhost:8080/api/vehicles/1
+Service implements single RESTful http request, that could be performed from any http-client, e.g. from a web-browser:
+```http://localhost:8080/api/vehicles/1```
+
+#### Database scheme generated with pgAdmin4:
+![alt text](https://github.com/toshamuravei/vb-test-task/blob/main/db_scheme.png)

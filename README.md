@@ -41,5 +41,5 @@ docker-compose -f docker/docker-compose.local.yaml up
 Service implements single RESTful http request, that could be performed from any http-client, e.g. from a web-browser:
 ```http://localhost:8080/api/vehicles/1```
 
-Database scheme generated with pgAdmin4
-[db_scheme](https://github.com/toshamuravei/vb-test-task/blob/main/db_scheme.png)
+#### Database scheme generated with pgAdmin4:
+![alt text](https://github.com/toshamuravei/vb-test-task/blob/main/db_scheme.png)
